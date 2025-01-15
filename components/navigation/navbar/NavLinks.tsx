@@ -31,15 +31,15 @@ const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
             className={cn(
               isActive
                 ? "primary-gradient rounded-lg text-light-900"
-                : "text-dark300_light900",
+                : "text-dark300_light900 transition-all duration-300 ease-out hover:bg-primary-100 dark:hover:bg-primary-500/15 hover:rounded-lg hover:scale-105 active:scale-95",
               "flex items-center justify-start gap-4 bg-transparent p-4"
             )}
           >
             <Image
-              src={item.imgURL}
-              alt={item.label}
               width={20}
               height={20}
+              alt={item.label}
+              src={item.imgURL}
               className={cn({ "invert-colors": !isActive })}
             />
             <p

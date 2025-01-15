@@ -1,14 +1,10 @@
 interface ProfilePageProps {
-  params: {
-    id: string;
-  };
+  params: { id: string };
 }
 
-const ProfilePage = (props: ProfilePageProps) => {
-  const {
-    params: { id },
-  } = props;
-  return <div>{id}</div>;
-};
+async function ProfilePage({ params }: ProfilePageProps) {
+  const { id } = await params;
 
+  return <h1>{id}</h1>;
+}
 export default ProfilePage;
