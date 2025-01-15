@@ -14,7 +14,7 @@ const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
 
   return (
     <>
-      {sidebarLinks.map((item) => {
+      {sidebarLinks.map((item, i) => {
         const isActive =
           (pathname.includes(item.route) && item.route.length > 1) ||
           pathname === item.route;
@@ -26,8 +26,8 @@ const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
 
         const LinkComponent = (
           <Link
+            key={i}
             href={item.route}
-            key={item.label}
             className={cn(
               isActive
                 ? "primary-gradient rounded-lg text-light-900"
