@@ -4,7 +4,12 @@ import { Button } from "@/components/ui/button";
 import ROUTES from "@/constants/routes";
 import LocalSearch from "@/components/search/LocalSearch";
 
-const Home = async () => {
+interface SearchParams {
+  searchParams: Promise<{ [key: string]: string }>;
+}
+
+const Home = async ({ searchParams }: SearchParams) => {
+  const { query = "" } = await searchParams;
   return (
     <>
       <section className="flex w-full flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
@@ -18,7 +23,12 @@ const Home = async () => {
         </Button>
       </section>
       <section className="mt-11">
-        <LocalSearch />
+        <LocalSearch
+          route={ROUTES.HOME}
+          otherClasses="flex-1"
+          imgSrc="/icons/search.svg"
+          placeholder="Search for questions..."
+        />
       </section>
       HomeFilter
       <div className="mt-10 flex w-full flex-col gap-6">
