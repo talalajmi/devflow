@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ROUTES from "@/constants/routes";
 import LocalSearch from "@/components/search/LocalSearch";
+import HomeFilter from "@/components/filters/HomeFilter";
 
 interface SearchParams {
   searchParams: Promise<{ [key: string]: string }>;
@@ -30,7 +31,7 @@ const Home = async ({ searchParams }: SearchParams) => {
           placeholder="Search for questions..."
         />
       </section>
-      HomeFilter
+      <HomeFilter />
       <div className="mt-10 flex w-full flex-col gap-6">
         <p>Question Card 1</p>
         <p>Question Card 1</p>

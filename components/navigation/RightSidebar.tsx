@@ -31,16 +31,16 @@ const RightSidebar = () => {
             <Link
               key={_id}
               href={ROUTES.PROFILE(_id)}
-              className="flex cursor-pointer items-center justify-between gap-7"
+              className="flex cursor-pointer items-center justify-between gap-7 group text-hover-effect hover:translate-x-1"
             >
-              <p className="body-medium text-dark500_light700">{title}</p>
+              <p className="body-medium">{title}</p>
 
               <Image
                 width={20}
                 height={20}
                 alt="Chevron"
-                className="invert-colors"
                 src="/icons/chevron-right.svg"
+                className="invert-colors"
               />
             </Link>
           ))}

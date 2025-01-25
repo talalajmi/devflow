@@ -203,6 +203,14 @@ body {
     @apply invert dark:invert-0;
   }
 
+  .btn-hover-effect {
+    @apply transition-all duration-300 ease-in-out hover:bg-primary-100 dark:hover:bg-primary-500/15;
+  }
+
+  .text-hover-effect {
+    @apply transition-all duration-300 ease-in-out hover:text-primary-500;
+  }
+
   .shadow-light100_dark100 {
     @apply shadow-light-100 dark:shadow-dark-100;
   }

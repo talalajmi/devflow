@@ -3,7 +3,7 @@ interface ProfilePageProps {
 }
 
 async function ProfilePage({ params }: ProfilePageProps) {
-  const { id } = await params;
+  const { id } = params;
 
   return <h1>{id}</h1>;
 }
